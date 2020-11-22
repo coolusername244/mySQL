@@ -1,0 +1,14 @@
+mysql> tee ChallengeThree.txt
+mysql> 
+
+select Track.Name as Track, MediaType.Name as Type, Genre.Name from Track INNER JOIN MediaType on Track.MediaTypeId = MediaType.MediaTypeId 
+INNER JOIN Genre on Track.GenreId = Genre.GenreId 
+where MediaType.Name = 'Protected AAC audio file' and Genre.Name = 'Soundtrack';
+
++---------------+--------------------------+------------+
+| Track         | Type                     | Name       |
++---------------+--------------------------+------------+
+| Koyaanisqatsi | Protected AAC audio file | Soundtrack |
++---------------+--------------------------+------------+
+1 row in set (0.00 sec)
+mysql> notee

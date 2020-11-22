@@ -1,0 +1,125 @@
+mysql> select * from Track
+    -> where Composer = 'U2';
++---------+--------------------------------------------+---------+-------------+---------+----------+--------------+----------+-----------+
+| TrackId | Name                                       | AlbumId | MediaTypeId | GenreId | Composer | Milliseconds | Bytes    | UnitPrice |
++---------+--------------------------------------------+---------+-------------+---------+----------+--------------+----------+-----------+
+|    2926 | Zoo Station                                |     232 |           1 |       1 | U2       |       276349 |  9056902 |      0.99 |
+|    2927 | Even Better Than The Real Thing            |     232 |           1 |       1 | U2       |       221361 |  7279392 |      0.99 |
+|    2928 | One                                        |     232 |           1 |       1 | U2       |       276192 |  9158892 |      0.99 |
+|    2929 | Until The End Of The World                 |     232 |           1 |       1 | U2       |       278700 |  9132485 |      0.99 |
+|    2930 | Who's Gonna Ride Your Wild Horses          |     232 |           1 |       1 | U2       |       316551 | 10304369 |      0.99 |
+|    2931 | So Cruel                                   |     232 |           1 |       1 | U2       |       349492 | 11527614 |      0.99 |
+|    2932 | The Fly                                    |     232 |           1 |       1 | U2       |       268982 |  8825399 |      0.99 |
+|    2933 | Mysterious Ways                            |     232 |           1 |       1 | U2       |       243826 |  8062057 |      0.99 |
+|    2934 | Tryin' To Throw Your Arms Around The World |     232 |           1 |       1 | U2       |       232463 |  7612124 |      0.99 |
+|    2935 | Ultraviolet (Light My Way)                 |     232 |           1 |       1 | U2       |       330788 | 10754631 |      0.99 |
+|    2936 | Acrobat                                    |     232 |           1 |       1 | U2       |       270288 |  8824723 |      0.99 |
+|    2937 | Love Is Blindness                          |     232 |           1 |       1 | U2       |       263497 |  8531766 |      0.99 |
+|    2949 | The Three Sunrises                         |     234 |           1 |       1 | U2       |       234788 |  7717990 |      0.99 |
+|    2950 | Spanish Eyes                               |     234 |           1 |       1 | U2       |       196702 |  6392710 |      0.99 |
+|    2951 | Sweetest Thing                             |     234 |           1 |       1 | U2       |       185103 |  6154896 |      0.99 |
+|    2952 | Love Comes Tumbling                        |     234 |           1 |       1 | U2       |       282671 |  9328802 |      0.99 |
+|    2953 | Bass Trap                                  |     234 |           1 |       1 | U2       |       213289 |  6834107 |      0.99 |
+|    2957 | Walk To The Water                          |     234 |           1 |       1 | U2       |       289253 |  9523336 |      0.99 |
+|    2959 | Hallelujah Here She Comes                  |     234 |           1 |       1 | U2       |       242364 |  8027028 |      0.99 |
+|    2961 | Endless Deep                               |     234 |           1 |       1 | U2       |       179879 |  5899070 |      0.99 |
+|    2962 | A Room At The Heartbreak Hotel             |     234 |           1 |       1 | U2       |       274546 |  9015416 |      0.99 |
+|    2963 | Trash, Trampoline And The Party Girl       |     234 |           1 |       1 | U2       |       153965 |  5083523 |      0.99 |
+|    3004 | Pride (In The Name Of Love)                |     238 |           1 |       1 | U2       |       230243 |  7549085 |      0.99 |
+|    3005 | New Year's Day                             |     238 |           1 |       1 | U2       |       258925 |  8491818 |      0.99 |
+|    3006 | With Or Without You                        |     238 |           1 |       1 | U2       |       299023 |  9765188 |      0.99 |
+|    3007 | I Still Haven't Found What I'm Looking For |     238 |           1 |       1 | U2       |       280764 |  9306737 |      0.99 |
+|    3008 | Sunday Bloody Sunday                       |     238 |           1 |       1 | U2       |       282174 |  9269668 |      0.99 |
+|    3009 | Bad                                        |     238 |           1 |       1 | U2       |       351817 | 11628058 |      0.99 |
+|    3010 | Where The Streets Have No Name             |     238 |           1 |       1 | U2       |       276218 |  9042305 |      0.99 |
+|    3011 | I Will Follow                              |     238 |           1 |       1 | U2       |       218253 |  7184825 |      0.99 |
+|    3012 | The Unforgettable Fire                     |     238 |           1 |       1 | U2       |       295183 |  9684664 |      0.99 |
+|    3014 | Desire                                     |     238 |           1 |       1 | U2       |       179853 |  5893206 |      0.99 |
+|    3015 | When Love Comes To Town                    |     238 |           1 |       1 | U2       |       258194 |  8479525 |      0.99 |
+|    3016 | Angel Of Harlem                            |     238 |           1 |       1 | U2       |       230217 |  7527339 |      0.99 |
+|    3018 | Sunday Bloody Sunday                       |     239 |           1 |       1 | U2       |       278204 |  9140849 |      0.99 |
+|    3019 | Seconds                                    |     239 |           1 |       1 | U2       |       191582 |  6352121 |      0.99 |
+|    3020 | New Year's Day                             |     239 |           1 |       1 | U2       |       336274 | 11054732 |      0.99 |
+|    3021 | Like A Song...                             |     239 |           1 |       1 | U2       |       287294 |  9365379 |      0.99 |
+|    3022 | Drowning Man                               |     239 |           1 |       1 | U2       |       254458 |  8457066 |      0.99 |
+|    3023 | The Refugee                                |     239 |           1 |       1 | U2       |       221283 |  7374043 |      0.99 |
+|    3024 | Two Hearts Beat As One                     |     239 |           1 |       1 | U2       |       243487 |  7998323 |      0.99 |
+|    3025 | Red Light                                  |     239 |           1 |       1 | U2       |       225854 |  7453704 |      0.99 |
+|    3026 | Surrender                                  |     239 |           1 |       1 | U2       |       333505 | 11221406 |      0.99 |
+|    3027 | "40"                                       |     239 |           1 |       1 | U2       |       157962 |  5251767 |      0.99 |
++---------+--------------------------------------------+---------+-------------+---------+----------+--------------+----------+-----------+
+44 rows in set (0.00 sec)
+
+mysql> select * from Album
+    -> where AlbumId = 232
+    -> ;
++---------+--------------+----------+
+| AlbumId | Title        | ArtistId |
++---------+--------------+----------+
+|     232 | Achtung Baby |      150 |
++---------+--------------+----------+
+1 row in set (0.01 sec)
+
+mysql> select * from Album
+    -> where AlbumId = 233
+    -> ;
++---------+---------------------------------+----------+
+| AlbumId | Title                           | ArtistId |
++---------+---------------------------------+----------+
+|     233 | All That You Can't Leave Behind |      150 |
++---------+---------------------------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from Album
+    -> where AlbumId = 234,235,236;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',235,236' at line 2
+mysql> select * from Album where AlbumId = 234, 235, 236;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', 235, 236' at line 1
+mysql> select * from Album where AlbumId = 234;
++---------+-------------------+----------+
+| AlbumId | Title             | ArtistId |
++---------+-------------------+----------+
+|     234 | B-Sides 1980-1990 |      150 |
++---------+-------------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from Album where AlbumId = 235;
++---------+---------------------------------+----------+
+| AlbumId | Title                           | ArtistId |
++---------+---------------------------------+----------+
+|     235 | How To Dismantle An Atomic Bomb |      150 |
++---------+---------------------------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from Album where AlbumId = 236;
++---------+-------+----------+
+| AlbumId | Title | ArtistId |
++---------+-------+----------+
+|     236 | Pop   |      150 |
++---------+-------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from Album where AlbumId = 237;
++---------+----------------+----------+
+| AlbumId | Title          | ArtistId |
++---------+----------------+----------+
+|     237 | Rattle And Hum |      150 |
++---------+----------------+----------+
+1 row in set (0.00 sec)
+
+mysql> notee;
+mysql> bonus
+    -> 
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bonus' at line 1
+mysql> select FirstName, LastName, Title from Employee
+    -> where Title = 'IT Staff';
++-----------+----------+----------+
+| FirstName | LastName | Title    |
++-----------+----------+----------+
+| Robert    | King     | IT Staff |
+| Laura     | Callahan | IT Staff |
++-----------+----------+----------+
+2 rows in set (0.00 sec)
+
+mysql> notee

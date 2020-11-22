@@ -1,0 +1,28 @@
+mysql> SELECT Playlist.Name AS Playlist, Track.Name AS Track, Album.Title AS Album, Artist.Name AS Artist FROM Playlist
+    -> INNER JOIN PlaylistTrack ON Playlist.PlaylistId = PlaylistTrack.PlaylistId
+    -> JOIN Track ON PlaylistTrack.TrackId = Track.TrackId
+    -> JOIN Album ON Track.AlbumId = Album.AlbumId
+    -> JOIN Artist on Album.ArtistId = Artist.ArtistId
+    -> WHERE Playlist.Name = 'Grunge';
++----------+-------------------------+-------------------+---------------------+
+| Playlist | Track                   | Album             | Artist              |
++----------+-------------------------+-------------------+---------------------+
+| Grunge   | Man In The Box          | Facelift          | Alice In Chains     |
+| Grunge   | Smells Like Teen Spirit | Nevermind         | Nirvana             |
+| Grunge   | In Bloom                | Nevermind         | Nirvana             |
+| Grunge   | Come As You Are         | Nevermind         | Nirvana             |
+| Grunge   | Lithium                 | Nevermind         | Nirvana             |
+| Grunge   | Drain You               | Nevermind         | Nirvana             |
+| Grunge   | On A Plain              | Nevermind         | Nirvana             |
+| Grunge   | Evenflow                | Ten               | Pearl Jam           |
+| Grunge   | Alive                   | Ten               | Pearl Jam           |
+| Grunge   | Jeremy                  | Ten               | Pearl Jam           |
+| Grunge   | Daughter                | Vs.               | Pearl Jam           |
+| Grunge   | Outshined               | A-Sides           | Soundgarden         |
+| Grunge   | Black Hole Sun          | A-Sides           | Soundgarden         |
+| Grunge   | Plush                   | Core              | Stone Temple Pilots |
+| Grunge   | Hunger Strike           | Temple of the Dog | Temple of the Dog   |
++----------+-------------------------+-------------------+---------------------+
+15 rows in set (0.01 sec)
+
+mysql> quit;

@@ -1,0 +1,32 @@
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| Chinook            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use Chinook;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> select Track.Name, MediaType.Name from Track
+    -> INNER JOIN MediaType on Track.MediaTypeId = MediaType.MediaTypeId;
++-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+
+| Name                                                                                                                        | Name                        |
++-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+
+| For Those About To Rock (We Salute You)                                                                                     | MPEG audio file             |
+| Put The Finger On You                                                                                                       | MPEG audio file             |
+| Let's Get It Up                                                                                                             | MPEG audio file             |
+| Inject The Venom                                                                                                            | MPEG audio file             |
+| Snowballed                                                                                                                  | MPEG audio file             |
++-----------------------------------------------------------------------------------------------------------------------------+-----------------------------+
+3503 rows in set (0.01 sec)
+
+mysql> notee

@@ -1,0 +1,143 @@
+mysql> show columns from Album
+    -> ;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| AlbumId  | int          | NO   | PRI | NULL    | auto_increment |
+| Title    | varchar(160) | NO   |     | NULL    |                |
+| ArtistId | int          | NO   | MUL | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> show columns in Artist;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| ArtistId | int          | NO   | PRI | NULL    | auto_increment |
+| Name     | varchar(120) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> show columns in Customer;
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| CustomerId   | int         | NO   | PRI | NULL    | auto_increment |
+| FirstName    | varchar(40) | NO   |     | NULL    |                |
+| LastName     | varchar(20) | NO   |     | NULL    |                |
+| Company      | varchar(80) | YES  |     | NULL    |                |
+| Address      | varchar(70) | YES  |     | NULL    |                |
+| City         | varchar(40) | YES  |     | NULL    |                |
+| State        | varchar(40) | YES  |     | NULL    |                |
+| Country      | varchar(40) | YES  |     | NULL    |                |
+| PostalCode   | varchar(10) | YES  |     | NULL    |                |
+| Phone        | varchar(24) | YES  |     | NULL    |                |
+| Fax          | varchar(24) | YES  |     | NULL    |                |
+| Email        | varchar(60) | NO   |     | NULL    |                |
+| SupportRepId | int         | YES  | MUL | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+13 rows in set (0.00 sec)
+
+mysql> show columns in Employee;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| EmployeeId | int         | NO   | PRI | NULL    | auto_increment |
+| LastName   | varchar(20) | NO   |     | NULL    |                |
+| FirstName  | varchar(20) | NO   |     | NULL    |                |
+| Title      | varchar(30) | YES  |     | NULL    |                |
+| ReportsTo  | int         | YES  | MUL | NULL    |                |
+| BirthDate  | datetime    | YES  |     | NULL    |                |
+| HireDate   | datetime    | YES  |     | NULL    |                |
+| Address    | varchar(70) | YES  |     | NULL    |                |
+| City       | varchar(40) | YES  |     | NULL    |                |
+| State      | varchar(40) | YES  |     | NULL    |                |
+| Country    | varchar(40) | YES  |     | NULL    |                |
+| PostalCode | varchar(10) | YES  |     | NULL    |                |
+| Phone      | varchar(24) | YES  |     | NULL    |                |
+| Fax        | varchar(24) | YES  |     | NULL    |                |
+| Email      | varchar(60) | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+15 rows in set (0.00 sec)
+
+mysql> show columns in Genre;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| GenreId | int          | NO   | PRI | NULL    | auto_increment |
+| Name    | varchar(120) | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> show columns in Invoice;
++-------------------+---------------+------+-----+---------+----------------+
+| Field             | Type          | Null | Key | Default | Extra          |
++-------------------+---------------+------+-----+---------+----------------+
+| InvoiceId         | int           | NO   | PRI | NULL    | auto_increment |
+| CustomerId        | int           | NO   | MUL | NULL    |                |
+| InvoiceDate       | datetime      | NO   |     | NULL    |                |
+| BillingAddress    | varchar(70)   | YES  |     | NULL    |                |
+| BillingCity       | varchar(40)   | YES  |     | NULL    |                |
+| BillingState      | varchar(40)   | YES  |     | NULL    |                |
+| BillingCountry    | varchar(40)   | YES  |     | NULL    |                |
+| BillingPostalCode | varchar(10)   | YES  |     | NULL    |                |
+| Total             | decimal(10,2) | NO   |     | NULL    |                |
++-------------------+---------------+------+-----+---------+----------------+
+9 rows in set (0.01 sec)
+
+mysql> show columns in InvoiceLine;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| InvoiceLineId | int           | NO   | PRI | NULL    | auto_increment |
+| InvoiceId     | int           | NO   | MUL | NULL    |                |
+| TrackId       | int           | NO   | MUL | NULL    |                |
+| UnitPrice     | decimal(10,2) | NO   |     | NULL    |                |
+| Quantity      | int           | NO   |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> show columns in MediaType;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| MediaTypeId | int          | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(120) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> show columns in Playlist;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| PlaylistId | int          | NO   | PRI | NULL    | auto_increment |
+| Name       | varchar(120) | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> show columns in PlaylistTrack;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| PlaylistId | int  | NO   | PRI | NULL    |       |
+| TrackId    | int  | NO   | PRI | NULL    |       |
++------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> show columns in Track;
++--------------+---------------+------+-----+---------+----------------+
+| Field        | Type          | Null | Key | Default | Extra          |
++--------------+---------------+------+-----+---------+----------------+
+| TrackId      | int           | NO   | PRI | NULL    | auto_increment |
+| Name         | varchar(200)  | NO   |     | NULL    |                |
+| AlbumId      | int           | YES  | MUL | NULL    |                |
+| MediaTypeId  | int           | NO   | MUL | NULL    |                |
+| GenreId      | int           | YES  | MUL | NULL    |                |
+| Composer     | varchar(220)  | YES  |     | NULL    |                |
+| Milliseconds | int           | NO   |     | NULL    |                |
+| Bytes        | int           | YES  |     | NULL    |                |
+| UnitPrice    | decimal(10,2) | NO   |     | NULL    |                |
++--------------+---------------+------+-----+---------+----------------+
+9 rows in set (0.00 sec)
+
+mysql> quit
