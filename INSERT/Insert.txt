@@ -1,0 +1,95 @@
+mysql> INSERT INTO MediaType (Name)
+    -> VALUES ("Test Media Type 1");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> INSERT INTO Album (Title, ArtistId)
+    -> VALUES ("Boy", 150);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select AlbumId from Album
+    -> where Title = "Boy";
++---------+
+| AlbumId |
++---------+
+|     348 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select MediaTypeId from MediaType
+    -> where Name = "protected AAC audio file";
++-------------+
+| MediaTypeId |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select GenreId from Genre
+    -> where Name = "Rock";
++---------+
+| GenreId |
++---------+
+|       1 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) 
+Values ("I Will Follow", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values ("Twilight", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values ("An Cat Dubh", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values ("Into the Heart", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values ("Out of Control", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values ("Stories for Boys", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values ("The Ocean", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values ("A Day Without Me", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values ("Another Time, Another Place", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> Insert into Track (Name, AlbumId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values("Extra Track", 348, 1, "U2", 290000, 1234, 0.99);
+ERROR 1364 (HY000): Field 'MediaTypeId' doesn't have a default value
+mysql> Insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values("Extra Track", 348, 2, 1, "U2", 290000, 1234, 0.99);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> Values ("", 348, 2, 1, "U2", 220000, 1234, 0.99)
+    -> ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> delete from Track
+    -> where Name = "";
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values
+    -> ("The Electric Co.", 348, 2, 1, "U2", 220000, 1234, 0.99),
+    -> ("Shadows and Tall Trees", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 2 rows affected (0.04 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> notee

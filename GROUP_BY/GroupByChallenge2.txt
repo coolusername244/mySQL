@@ -1,0 +1,11 @@
+mysql> SELECT SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity), Track.Name as Track from InvoiceLine
+    -> Join Track on InvoiceLine.TrackId = Track.TrackId
+    -> Where Track.Name = "The Woman King";
++---------------------------------------------------+----------------+
+| SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity) | Track          |
++---------------------------------------------------+----------------+
+|                                              3.98 | The Woman King |
++---------------------------------------------------+----------------+
+1 row in set (0.01 sec)
+
+mysql> tee Insert.txt

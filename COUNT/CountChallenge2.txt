@@ -1,0 +1,11 @@
+mysql> select Employee.FirstName as Employee, count(Customer.FirstName) as Customer from Employee
+    -> join Customer on Customer.SupportRepId = Employee.EmployeeId
+    -> where Employee.FirstName = "Jane";
++----------+----------+
+| Employee | Customer |
++----------+----------+
+| Jane     |       21 |
++----------+----------+
+1 row in set (0.00 sec)
+
+mysql> notee
