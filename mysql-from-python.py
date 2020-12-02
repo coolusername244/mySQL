@@ -8,7 +8,10 @@ username = os.environ.get("usernme")
 password = os.environ.get("password")
 
 connection = pymysql.connect(
-    host="localhost", user=username, password=password, db="Chinook"
+    host="localhost",
+    user=username,
+    password=password,
+    db="Chinook"
 )
 
 try:
